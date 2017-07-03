@@ -51,15 +51,17 @@ export const checkout = products => (dispatch, getState) => {
 //   return { type: ADD_TODO, text }
 // }
 
-export const loginIn = () => dispatch => {
-  console.log('action!')
+export const loginIn = auth => (dispatch, getters) => {
+  console.log('in!')
 
-  return {
+  dispatch({
     type: types.LOGIN_IN
-  }
+  })
 }
 
 export const loginOut = auth => (dispatch, getState) => {
+  console.log('out!')
+
   dispatch({
     type: types.LOGIN_OUT
   })
