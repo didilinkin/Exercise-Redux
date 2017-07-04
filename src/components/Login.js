@@ -7,19 +7,14 @@ class Login extends React.Component {
     }
     // 鉴定事件
     authenticate () {
-        // setTimeout(console.log('登录'), 2000)
-        // let timedCount = function () {
-        //     console.log(this)
-        // }
         setTimeout(() => {
-            // console.log(this.props)
             this.props.onClickAuth()
         }, 500)
     }
     // 需要更新
     componentWillReceiveProps (nextProps) {
         console.log('props更新')
-        console.log(nextProps.value)
+        // console.log(nextProps.value)
     }
     render () {
         const { authState, onClickOut } = this.props
@@ -30,11 +25,9 @@ class Login extends React.Component {
                 ) : (
                     <b> 未登录B </b>
                 )}
-                {/* 登录 */}
                 <button onClick={ this.authenticate }>
                     检验登录
                 </button>
-                {/* 退出 */}
                 <button onClick={ onClickOut }>
                     退出
                 </button>

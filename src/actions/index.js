@@ -39,29 +39,13 @@ export const checkout = products => (dispatch, getState) => {
   })
 }
 
-// export const loginIn = auth => (dispatch, getState) => {
-//   console.log('action!')
-
-//   dispatch({
-//     type: types.LOGIN_IN
-//   })
-// }
-
-// export function addTodo(text) {
-//   return { type: ADD_TODO, text }
-// }
-
 export const loginIn = auth => (dispatch, getters) => {
-  console.log('in!')
-
   dispatch({
     type: types.LOGIN_IN
   })
 }
 
 export const loginOut = auth => (dispatch, getState) => {
-  console.log('out!')
-
   dispatch({
     type: types.LOGIN_OUT
   })
