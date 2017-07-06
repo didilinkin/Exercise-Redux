@@ -3,8 +3,13 @@ import { connect } from 'react-redux'
 
 // action
 import { loginIn, loginOut } from '../actions'
-// reduces
-import { getAuthState } from '../reducers'
+
+// reduces( 放弃reducers根文件 即收集reducers的store, 又要暴露get方法: 有点臃肿 )
+// import { getAuthState } from '../reducers'
+
+// getters( 创造出getters方法， 目前是根文件收集. 只负责收集并且暴露 get方法 )
+import { getAuthState } from '../getters'
+
 // components
 import Login from '../components/Login'
 

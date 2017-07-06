@@ -1,7 +1,10 @@
+// reducers 根
 import { combineReducers } from 'redux'
 import cart, * as fromCart from './cart'
 import products, * as fromProducts from './products'
-import auth, * as fromAuth from './auth'
+
+// import auth, * as fromAuth from './auth'
+import auth from './auth'
 
 export default combineReducers({
   cart,
@@ -13,7 +16,7 @@ const getAddedIds = state => fromCart.getAddedIds(state.cart)
 const getQuantity = (state, id) => fromCart.getQuantity(state.cart, id)
 const getProduct = (state, id) => fromProducts.getProduct(state.products, id)
 
-const getAuth = state => fromAuth.getAuth(state.auth)
+// const getAuth = state => fromAuth.getAuth(state.auth)
 
 export const getTotal = state =>
   getAddedIds(state)
@@ -29,5 +32,5 @@ export const getCartProducts = state =>
     quantity: getQuantity(state, id)
   }))
 
-export const getAuthState = state =>
-  getAuth(state)
+// export const getAuthState = state =>
+//   getAuth(state)
